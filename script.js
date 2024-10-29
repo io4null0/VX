@@ -4,7 +4,7 @@ document.addEventListener('keydown', () => {
 
   // リアルなコード行の配列
   const codeLines = [
-    ">>> Initializing system diagnostics...",
+    "C:\\Users\\User> Initializing system diagnostics...",
     ">>> Connecting to database at 192.168.1.1...",
     ">>> User authentication successful for admin",
     ">>> Running sudo command: access_grant -all",
