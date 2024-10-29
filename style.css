@@ -1,0 +1,26 @@
+/* style.css */
+body {
+  margin: 0;
+  background-color: black;
+  color: #00ff00;
+  font-family: monospace;
+  overflow: hidden;
+}
+
+#hacking-screen {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.code-line {
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+/* フェードインアニメーション */
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
