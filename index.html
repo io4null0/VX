@@ -5,8 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- ビューポート設定 -->
   <title>hack sim</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="manifest" href="manifest.json"> <!-- manifest.jsonのリンク -->
+  <!-- manifest.jsonのリンク -->
   <meta name="theme-color" content="#00FF00"> <!-- テーマカラー -->
+<!-- マニフェストファイル -->
+<link rel="manifest" href="./manifest.json">
+<!-- サービスワーカーの登録 -->
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('./service-worker.js')
+        .then((registration) => {
+          console.log('ServiceWorker registration successful:', registration);
+        })
+        .catch((error) => {
+          console.error('ServiceWorker registration failed:', error);
+        });
+    });
+  }
+</script>
+
 </head>
 <body>
   <div id="hacking-screen"></div>
